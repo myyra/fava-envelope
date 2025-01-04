@@ -16,7 +16,7 @@ from beancount.core import prices
 from beancount.core.data import Custom
 from beancount.core.number import Decimal
 from beancount.parser import options
-from beancount.query import query
+from beanquery import query
 from dateutil.relativedelta import relativedelta
 
 

@@ -18,11 +18,11 @@ classifiers = [
 ]
 
 dependencies = [
-    "fava>=1.26",
+    "fava>=1.30",
     "pandas>=2.0.3",
 ]
 
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = {text = "MIT"}
 
 [build-system]
