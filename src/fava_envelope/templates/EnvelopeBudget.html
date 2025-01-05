@@ -1,5 +1,5 @@
 {% set new_querytable = extension.use_new_querytable() %}
-{% import "_query_table.html" as querytable with context %}
+{% import "_budget_table.html" as querytable with context %}
 {% set currency = request.args.get('currency') %}
 {% if currency == None%}
 {% set currency = extension.get_currencies()[0]%}
@@ -35,6 +35,11 @@
 {% endif %}
 
 {% set envelope_table = extension.generate_envelope_query_tables(month) %}
+<style>
+  td.num.negative {
+    color: red;
+  }
+</style>
 {% if new_querytable %}
 {{ querytable.querytable(ledger, None, envelope_table[0], envelope_table[1]) }}
 {% else %}
